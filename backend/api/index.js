@@ -51,6 +51,10 @@ const { ContextGraph } = require('./context_engine');
 // In a real serverless env, this would be a Redis cache with low TTL
 const privacyContext = new Map();
 
+app.get('/', (req, res) => {
+  res.json({ status: 'online', engine: 'Project Omniscience', version: '1.2.1', message: 'Recursive Research API Ready' });
+});
+
 // --- Streaming Search Endpoint (SSE) ---
 app.post('/search', async (req, res) => {
   try {
