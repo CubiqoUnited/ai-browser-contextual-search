@@ -1,0 +1,30 @@
+{
+  "name": "ai-browser-backend-vercel",
+  "version": "0.1.0",
+  "description": "AI Browser Backend optimized for Vercel",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "vercel-build": "npm install --production"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "helmet": "^7.1.0",
+    "morgan": "^1.10.0",
+    "axios": "^1.6.2",
+    "sharp": "^0.33.2"
+  },
+  "engines": {
+    "node": "18.x"
+  },
+  "keywords": [
+    "ai",
+    "browser",
+    "contextual-search",
+    "privacy",
+    "vercel"
+  ],
+  "author": "AI Browser Team",
+  "license": "MIT"
+}

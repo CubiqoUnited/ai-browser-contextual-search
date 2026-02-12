@@ -1,0 +1,27 @@
+{
+  "name": "ai-browser-api",
+  "version": "1.0.0",
+  "description": "AI Browser API for Vercel Serverless",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "@tavily/core": "^0.7.1",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "helmet": "^7.1.0"
+  },
+  "engines": {
+    "node": "24.x"
+  },
+  "keywords": [
+    "ai",
+    "browser",
+    "api",
+    "vercel",
+    "serverless"
+  ],
+  "author": "AI Browser Team",
+  "license": "MIT"
+}

@@ -1,0 +1,26 @@
+services:
+  - type: web
+    name: ai-browser-backend
+    env: docker
+    dockerfilePath: ./backend/Dockerfile
+    dockerContext: ./backend
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 3000
+      - key: CACHE_CLEAR_PASSWORD
+        generateValue: true
+    healthCheckPath: /health
+    autoDeploy: true
+    regions:
+      - oregon
+    plan: free
+    numInstances: 1
+
+  # Optional: Redis for caching
+  - type: redis
+    name: ai-browser-cache
+    ipAllowList: []
+    plan: free
+    maxmemoryPolicy: allkeys-lru
